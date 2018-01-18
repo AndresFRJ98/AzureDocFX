@@ -1,0 +1,260 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Sergio/Desktop/Year 2/COMP214P - Systems Engineering/Source/doctest/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.BreathRecogniser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.BreathRecogniser.html",
+          "hash": "EIgVL72I0dfNHYhlViSn4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.Calibration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.Calibration.html",
+          "hash": "HnVhHkyuBZgPvqAt2A/kow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.ExhalationCompleteEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.ExhalationCompleteEventArgs.html",
+          "hash": "mXZg7Mx3LlHXBe3ueV3VJQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.ExhalationCompleteEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.ExhalationCompleteEventHandler.html",
+          "hash": "ixH0VLqwwUEIIviMy/3u/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.FizzyoAchievments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.FizzyoAchievments.html",
+          "hash": "yQMiUVRqToPw3CIkEava0Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.FizzyoAnalytics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.FizzyoAnalytics.html",
+          "hash": "fwvEXOn+LMu3EpbcgoRmvg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.FizzyoDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.FizzyoDevice.html",
+          "hash": "d5O7XBZfygMyhEhVAq+1lQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.FizzyoFramework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.FizzyoFramework.html",
+          "hash": "S37ArBgm1h1V+OXSv4k/ag=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.FizzyoRequestReturnType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.FizzyoRequestReturnType.html",
+          "hash": "4/7/B5M0+9UbDCt2g56htA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.FizzyoUser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.FizzyoUser.html",
+          "hash": "QiEyc9zJ8sOlOW5BD5MyUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.Session.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.Session.html",
+          "hash": "5Xzz9qxDslrrO5Bjm65mPA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Fizzyo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Fizzyo.html",
+          "hash": "0UhA7fTQ4CSQqTnJ/CM1fg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "EYGVhxrn1sJaJ5X+9SOMDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "4/WW6SbzmMrUW25U7vrccQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "UUpcgQf25mcX27Ke+SCmPQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "lGrGiMrueDwru0zc8g943Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
