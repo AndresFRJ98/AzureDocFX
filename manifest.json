@@ -5,47 +5,11 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Fizzyo.BreathRecogniser.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Fizzyo.BreathRecogniser.html",
-          "hash": "EIgVL72I0dfNHYhlViSn4w=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/Fizzyo.Calibration.yml",
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.Calibration.html",
-          "hash": "HnVhHkyuBZgPvqAt2A/kow=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Fizzyo.ExhalationCompleteEventArgs.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Fizzyo.ExhalationCompleteEventArgs.html",
-          "hash": "mXZg7Mx3LlHXBe3ueV3VJQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Fizzyo.ExhalationCompleteEventHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Fizzyo.ExhalationCompleteEventHandler.html",
-          "hash": "ixH0VLqwwUEIIviMy/3u/Q=="
+          "hash": "yv970cR5YENFvUg0cLW39A=="
         }
       },
       "is_incremental": true,
@@ -57,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.FizzyoAchievments.html",
-          "hash": "yQMiUVRqToPw3CIkEava0Q=="
+          "hash": "9LpOCQcB7O3vK1y3bygKSQ=="
         }
       },
       "is_incremental": true,
@@ -69,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.FizzyoAnalytics.html",
-          "hash": "fwvEXOn+LMu3EpbcgoRmvg=="
+          "hash": "WxyG3jL/MMumbjaLlfyTWw=="
         }
       },
       "is_incremental": true,
@@ -81,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.FizzyoDevice.html",
-          "hash": "d5O7XBZfygMyhEhVAq+1lQ=="
+          "hash": "xqGFr381BiEuR7ovFKxCrA=="
         }
       },
       "is_incremental": true,
@@ -93,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.FizzyoFramework.html",
-          "hash": "S37ArBgm1h1V+OXSv4k/ag=="
+          "hash": "m9+V9TbkpA7Qm/NOmjgnKA=="
         }
       },
       "is_incremental": true,
@@ -117,19 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.FizzyoUser.html",
-          "hash": "QiEyc9zJ8sOlOW5BD5MyUQ=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Fizzyo.Session.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Fizzyo.Session.html",
-          "hash": "5Xzz9qxDslrrO5Bjm65mPA=="
+          "hash": "X183q0sGSgzjTF8kez2UUA=="
         }
       },
       "is_incremental": true,
@@ -141,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Fizzyo.html",
-          "hash": "0UhA7fTQ4CSQqTnJ/CM1fg=="
+          "hash": "Wij6bRtAngmPYWp8VGPyCQ=="
         }
       },
       "is_incremental": true,
@@ -153,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "EYGVhxrn1sJaJ5X+9SOMDw=="
+          "hash": "JlZ7nPbZd2oFDr+5iiWaDg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "4/WW6SbzmMrUW25U7vrccQ=="
+          "hash": "OmVkhBC5rRoqrt+3GEFmLw=="
         }
       },
       "is_incremental": false,
@@ -189,10 +141,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+          "hash": "VxOfza3XOQ9TDqSr5EAaMw=="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/user-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/user-guide.html",
+          "hash": "j2Xw2HEyhOU2ri00UFg4tw=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -201,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "lGrGiMrueDwru0zc8g943Q=="
+          "hash": "WOPbFs/YiDmp/nS5YdarZQ=="
         }
       },
       "is_incremental": true,

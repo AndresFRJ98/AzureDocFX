@@ -77,59 +77,27 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="Fizzyo.BreathRecogniser.html">BreathRecogniser</a></h4>
-      <section><p>Breath Analyser class decouples the logic of recognizing breaths from a stream of pressure samples
-from acting on the recognition.  To use:</p>
-<ol>
-<li>Create an instance of BreathAnalyser: BreathAnalyser breathAnalyser = new BreathAnalyser()</li>
-<li>Set the calibration properties: MaxPressure and MaxBreathLength</li>
-<li>Register for the ExhalationCompleteEvent: breathAnalyser.ExhalationComplete += ExhalationCompleteHandler</li>
-<li>Add pressure samples in the update loop: AddSample(Time.DeltaTime, pressure)</li>
-<li>The event will fire at the end of an exhaled breath and provide information for:</li>
-</ol>
-<p>a) BreathLength
-b) BreathCount
-c) ExhaledVolume
-d) IsBreathFull</p>
-<ol>
-<li>You can interrogate the breath analyser at any time to determine:</li>
-</ol>
-<p>a) BreathLength
-b) BreathCount
-c) ExhaledVolume
-d) IsExhaling
-e) MaxPressure
-f) MaxBreathLength</p>
-<p>The algorithm for determining whether a breath is fully completed is encapsulated in the method IsBreathFull()
-and currently returns true if the average breath pressure and breath length is within 80% of the max.</p>
-</section>
       <h4><a class="xref" href="Fizzyo.Calibration.html">Calibration</a></h4>
       <section><p>An Instance of this class can be created to calibrate the game based on the users device input</p>
-</section>
-      <h4><a class="xref" href="Fizzyo.ExhalationCompleteEventArgs.html">ExhalationCompleteEventArgs</a></h4>
-      <section><p>Provides data about the current breath to the receiver when the ExhalationComplete event fires</p>
 </section>
       <h4><a class="xref" href="Fizzyo.FizzyoAchievments.html">FizzyoAchievments</a></h4>
       <section><p>Used to unlock Fizzyo achievments and post high scores in the Fizzyo rest API </p>
 </section>
       <h4><a class="xref" href="Fizzyo.FizzyoAnalytics.html">FizzyoAnalytics</a></h4>
-      <section></section>
+      <section><p>An instance of this class can be created to send game analytics once a session is over. </p>
+</section>
       <h4><a class="xref" href="Fizzyo.FizzyoDevice.html">FizzyoDevice</a></h4>
-      <section></section>
+      <section><p>Class responsible for parsing data from the Fizzyo device</p>
+</section>
       <h4><a class="xref" href="Fizzyo.FizzyoFramework.html">FizzyoFramework</a></h4>
       <section><p>Interface class for Fizzyo Framework</p>
 </section>
       <h4><a class="xref" href="Fizzyo.FizzyoUser.html">FizzyoUser</a></h4>
-      <section></section>
-      <h4><a class="xref" href="Fizzyo.Session.html">Session</a></h4>
-      <section></section>
+      <section><p>Class that handles correct identification of each user, thanks to the use of Windows Live authentication</p>
+</section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Fizzyo.FizzyoRequestReturnType.html">FizzyoRequestReturnType</a></h4>
-      <section></section>
-    <h3 id="delegates">Delegates
-  </h3>
-      <h4><a class="xref" href="Fizzyo.ExhalationCompleteEventHandler.html">ExhalationCompleteEventHandler</a></h4>
       <section></section>
 </article>
           </div>
