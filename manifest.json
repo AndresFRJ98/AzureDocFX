@@ -108,7 +108,7 @@
           "hash": "JlZ7nPbZd2oFDr+5iiWaDg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -121,6 +121,18 @@
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/contact.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/contact.html",
+          "hash": "sD/7vtXjRJadEhL9BbDIYw=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "VxOfza3XOQ9TDqSr5EAaMw=="
+          "hash": "WIk77mjWBTsszYDPOtadsA=="
         }
       },
       "is_incremental": false,
@@ -153,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/user-guide.html",
-          "hash": "j2Xw2HEyhOU2ri00UFg4tw=="
+          "hash": "yEAV6TYcv4svtvCAS49drw=="
         }
       },
       "is_incremental": true,
@@ -168,16 +180,19 @@
           "hash": "WOPbFs/YiDmp/nS5YdarZQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+          "hash": "nVdQZo1rx8zxBEqmDZjwEA=="
         }
       },
       "is_incremental": false,
@@ -196,11 +211,11 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }
