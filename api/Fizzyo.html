@@ -77,14 +77,51 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Fizzyo.BreathRecogniser.html">BreathRecogniser</a></h4>
+      <section><p>Breath Analyser class decouples the logic of recognizing breaths from a stream of pressure samples
+from acting on the recognition.  To use:</p>
+<ol>
+<li>Create an instance of BreathAnalyser: BreathAnalyser breathAnalyser = new BreathAnalyser()</li>
+<li>Set the calibration properties: MaxPressure and MaxBreathLength</li>
+<li>Register for the ExhalationCompleteEvent: breathAnalyser.ExhalationComplete += ExhalationCompleteHandler</li>
+<li>Add pressure samples in the update loop: AddSample(Time.DeltaTime, pressure)</li>
+<li>The event will fire at the end of an exhaled breath and provide information for:</li>
+</ol>
+<p>a) BreathLength
+b) BreathCount
+c) ExhaledVolume
+d) IsBreathFull</p>
+<p>You can interrogate the breath analyser at any time to determine:</p>
+<p>a) BreathLength
+b) BreathCount
+c) ExhaledVolume
+d) IsExhaling
+e) MaxPressure
+f) MaxBreathLength
+g) GoodBreaths
+h) BadBreaths </p>
+<p>The algorithm for determining whether a breath is fully completed is encapsulated in the method IsBreathFull()
+and currently returns true if the average breath pressure and breath length is within 80% of the max.</p>
+</section>
       <h4><a class="xref" href="Fizzyo.Calibration.html">Calibration</a></h4>
       <section><p>An Instance of this class can be created to calibrate the game based on the users device input</p>
 </section>
-      <h4><a class="xref" href="Fizzyo.FizzyoAchievments.html">FizzyoAchievments</a></h4>
-      <section><p>Used to unlock Fizzyo achievments and post high scores in the Fizzyo rest API </p>
+      <h4><a class="xref" href="Fizzyo.FizzyoAchievements.html">FizzyoAchievements</a></h4>
+      <section><p>Used to unlock Fizzyo achievements and post high scores in the Fizzyo rest API </p>
 </section>
       <h4><a class="xref" href="Fizzyo.FizzyoAnalytics.html">FizzyoAnalytics</a></h4>
-      <section><p>An instance of this class can be created to send game analytics once a session is over. </p>
+      <section><p>This class manages the creation of sessions to send over data once the game is about to shut down. 
+It will post: </p>
+<ol>
+<li>Amount of sets in this session</li>
+<li>Amounts of breaths in this session </li>
+<li>Amount of good breaths in this session</li>
+<li>Amount of bad breaths in this session</li>
+<li>User&apos;s game score for this session</li>
+<li>Start time of the session</li>
+<li>End time of the session. 
+Note: Time represented as Unix Epoch time.       </li>
+</ol>
 </section>
       <h4><a class="xref" href="Fizzyo.FizzyoDevice.html">FizzyoDevice</a></h4>
       <section><p>Class responsible for parsing data from the Fizzyo device</p>

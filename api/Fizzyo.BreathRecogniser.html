@@ -86,15 +86,15 @@ from acting on the recognition.  To use:</p>
 b) BreathCount
 c) ExhaledVolume
 d) IsBreathFull</p>
-<ol>
-<li>You can interrogate the breath analyser at any time to determine:</li>
-</ol>
+<p>You can interrogate the breath analyser at any time to determine:</p>
 <p>a) BreathLength
 b) BreathCount
 c) ExhaledVolume
 d) IsExhaling
 e) MaxPressure
-f) MaxBreathLength</p>
+f) MaxBreathLength
+g) GoodBreaths
+h) BadBreaths </p>
 <p>The algorithm for determining whether a breath is fully completed is encapsulated in the method IsBreathFull()
 and currently returns true if the average breath pressure and breath length is within 80% of the max.</p>
 </div>
@@ -105,7 +105,7 @@ and currently returns true if the average breath pressure and breath length is w
     <div class="level1"><span class="xref">BreathRecogniser</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Fizzyo.html">Fizzyo</a></h6>
-  <h6><strong>Assembly</strong>: ConsoleApplication.dll</h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Fizzyo_BreathRecogniser_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class BreathRecogniser</code></pre>
@@ -124,6 +124,31 @@ and currently returns true if the average breath pressure and breath length is w
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Fizzyo_BreathRecogniser_BadBreaths_" data-uid="Fizzyo.BreathRecogniser.BadBreaths*"></a>
+  <h4 id="Fizzyo_BreathRecogniser_BadBreaths" data-uid="Fizzyo.BreathRecogniser.BadBreaths">BadBreaths</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int BadBreaths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Fizzyo_BreathRecogniser_BreathCount_" data-uid="Fizzyo.BreathRecogniser.BreathCount*"></a>
@@ -226,6 +251,31 @@ and currently returns true if the average breath pressure and breath length is w
   </table>
   
   
+  <a id="Fizzyo_BreathRecogniser_GoodBreaths_" data-uid="Fizzyo.BreathRecogniser.GoodBreaths*"></a>
+  <h4 id="Fizzyo_BreathRecogniser_GoodBreaths" data-uid="Fizzyo.BreathRecogniser.GoodBreaths">GoodBreaths</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GoodBreaths { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Fizzyo_BreathRecogniser_IsExhaling_" data-uid="Fizzyo.BreathRecogniser.IsExhaling*"></a>
   <h4 id="Fizzyo_BreathRecogniser_IsExhaling" data-uid="Fizzyo.BreathRecogniser.IsExhaling">IsExhaling</h4>
   <div class="markdown level1 summary"></div>
@@ -305,7 +355,8 @@ and currently returns true if the average breath pressure and breath length is w
   
   <a id="Fizzyo_BreathRecogniser_AddSample_" data-uid="Fizzyo.BreathRecogniser.AddSample*"></a>
   <h4 id="Fizzyo_BreathRecogniser_AddSample_System_Single_System_Single_" data-uid="Fizzyo.BreathRecogniser.AddSample(System.Single,System.Single)">AddSample(Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds a sample to the BreathAnalyser</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -324,12 +375,14 @@ and currently returns true if the average breath pressure and breath length is w
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">dt</span></td>
-        <td></td>
+        <td><p>Float value indicating the delta time </p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
+        <td><p>Float value indicating breath strength </p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -337,7 +390,8 @@ and currently returns true if the average breath pressure and breath length is w
   
   <a id="Fizzyo_BreathRecogniser_GetBreathQuality_" data-uid="Fizzyo.BreathRecogniser.GetBreathQuality*"></a>
   <h4 id="Fizzyo_BreathRecogniser_GetBreathQuality_System_Single_" data-uid="Fizzyo.BreathRecogniser.GetBreathQuality(System.Single)">GetBreathQuality(Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns an integer indicating breath quality (see return values)</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,7 +425,12 @@ and currently returns true if the average breath pressure and breath length is w
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td></td>
+        <td><p>0 - Breath was 0 - 25% of the calibrated breath length</p>
+<p>1 - Breath was 25% - 50% of the calibrated breath length</p>
+<p>2 - Breath was 50 - 75% of the calibrated breath length</p>
+<p>3 - Breath was 75% - 100% of the calibrated breath length</p>
+<p>4 - Breath was 100% of the calibrated breath length</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -379,7 +438,9 @@ and currently returns true if the average breath pressure and breath length is w
   
   <a id="Fizzyo_BreathRecogniser_IsBreathFull_" data-uid="Fizzyo.BreathRecogniser.IsBreathFull*"></a>
   <h4 id="Fizzyo_BreathRecogniser_IsBreathFull_System_Single_System_Single_System_Single_System_Single_" data-uid="Fizzyo.BreathRecogniser.IsBreathFull(System.Single,System.Single,System.Single,System.Single)">IsBreathFull(Single, Single, Single, Single)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns true if the breath was within the threshold of a &apos;good breath&apos;
+Updates the good and bad breath counts. </p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -436,7 +497,8 @@ and currently returns true if the average breath pressure and breath length is w
   
   <a id="Fizzyo_BreathRecogniser_OnExhalationComplete_" data-uid="Fizzyo.BreathRecogniser.OnExhalationComplete*"></a>
   <h4 id="Fizzyo_BreathRecogniser_OnExhalationComplete_System_Object_Fizzyo_ExhalationCompleteEventArgs_" data-uid="Fizzyo.BreathRecogniser.OnExhalationComplete(System.Object,Fizzyo.ExhalationCompleteEventArgs)">OnExhalationComplete(Object, ExhalationCompleteEventArgs)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invoke the event - called whenever exhalation finishes</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -458,7 +520,7 @@ and currently returns true if the average breath pressure and breath length is w
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Fizzyo.ExhalationCompleteEventArgs.html">ExhalationCompleteEventArgs</a></td>
+        <td><span class="xref">Fizzyo.ExhalationCompleteEventArgs</span></td>
         <td><span class="parametername">e</span></td>
         <td></td>
       </tr>
@@ -468,7 +530,8 @@ and currently returns true if the average breath pressure and breath length is w
   
   <a id="Fizzyo_BreathRecogniser_OnExhalationStarted_" data-uid="Fizzyo.BreathRecogniser.OnExhalationStarted*"></a>
   <h4 id="Fizzyo_BreathRecogniser_OnExhalationStarted_System_Object_" data-uid="Fizzyo.BreathRecogniser.OnExhalationStarted(System.Object)">OnExhalationStarted(Object)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Invoke the event - called whenever exhalation starts</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -495,7 +558,8 @@ and currently returns true if the average breath pressure and breath length is w
   
   <a id="Fizzyo_BreathRecogniser_ResetSession_" data-uid="Fizzyo.BreathRecogniser.ResetSession*"></a>
   <h4 id="Fizzyo_BreathRecogniser_ResetSession" data-uid="Fizzyo.BreathRecogniser.ResetSession">ResetSession()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resest the BreathAnalyser</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -522,7 +586,7 @@ and currently returns true if the average breath pressure and breath length is w
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Fizzyo.ExhalationCompleteEventHandler.html">ExhalationCompleteEventHandler</a></td>
+        <td><span class="xref">Fizzyo.ExhalationCompleteEventHandler</span></td>
         <td></td>
       </tr>
     </tbody>

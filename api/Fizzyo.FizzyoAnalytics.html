@@ -73,7 +73,18 @@
   
   <h1 id="Fizzyo_FizzyoAnalytics" data-uid="Fizzyo.FizzyoAnalytics" class="text-break">Class FizzyoAnalytics
   </h1>
-  <div class="markdown level0 summary"><p>An instance of this class can be created to send game analytics once a session is over. </p>
+  <div class="markdown level0 summary"><p>This class manages the creation of sessions to send over data once the game is about to shut down. 
+It will post: </p>
+<ol>
+<li>Amount of sets in this session</li>
+<li>Amounts of breaths in this session </li>
+<li>Amount of good breaths in this session</li>
+<li>Amount of bad breaths in this session</li>
+<li>User&apos;s game score for this session</li>
+<li>Start time of the session</li>
+<li>End time of the session. 
+Note: Time represented as Unix Epoch time.       </li>
+</ol>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -82,11 +93,226 @@
     <div class="level1"><span class="xref">FizzyoAnalytics</span></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Fizzyo.html">Fizzyo</a></h6>
-  <h6><strong>Assembly</strong>: ConsoleApplication.dll</h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Fizzyo_FizzyoAnalytics_syntax">Syntax</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class FizzyoAnalytics</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Fizzyo_FizzyoAnalytics_badBreathCount" data-uid="Fizzyo.FizzyoAnalytics.badBreathCount">badBreathCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int badBreathCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Fizzyo_FizzyoAnalytics_breathCount" data-uid="Fizzyo.FizzyoAnalytics.breathCount">breathCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int breathCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Fizzyo_FizzyoAnalytics_endTime" data-uid="Fizzyo.FizzyoAnalytics.endTime">endTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int endTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Fizzyo_FizzyoAnalytics_goodBreathCount" data-uid="Fizzyo.FizzyoAnalytics.goodBreathCount">goodBreathCount</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int goodBreathCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Fizzyo_FizzyoAnalytics_startTime" data-uid="Fizzyo.FizzyoAnalytics.startTime">startTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int startTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Fizzyo_FizzyoAnalytics_Score_" data-uid="Fizzyo.FizzyoAnalytics.Score*"></a>
+  <h4 id="Fizzyo_FizzyoAnalytics_Score" data-uid="Fizzyo.FizzyoAnalytics.Score">Score</h4>
+  <div class="markdown level1 summary"><p>Add this to your game to update the score to send in the session. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Score { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Fizzyo_FizzyoAnalytics_SetCount_" data-uid="Fizzyo.FizzyoAnalytics.SetCount*"></a>
+  <h4 id="Fizzyo_FizzyoAnalytics_SetCount" data-uid="Fizzyo.FizzyoAnalytics.SetCount">SetCount</h4>
+  <div class="markdown level1 summary"><p>Add this to your game to update the breathing setcount to send in the session. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SetCount { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Fizzyo_FizzyoAnalytics_PostAnalytics_" data-uid="Fizzyo.FizzyoAnalytics.PostAnalytics*"></a>
+  <h4 id="Fizzyo_FizzyoAnalytics_PostAnalytics" data-uid="Fizzyo.FizzyoAnalytics.PostAnalytics">PostAnalytics()</h4>
+  <div class="markdown level1 summary"><p>Once the game shuts down, information from the session is sent to the server. </p>
+<p>It will send: </p>
+<ol>
+<li>Amount of sets in this session</li>
+<li>Amounts of breaths in this session </li>
+<li>Amount of good breaths in this session</li>
+<li>Amount of bad breaths in this session</li>
+<li>User&apos;s game score for this session</li>
+<li>Start time of the session</li>
+<li>End time of the session. 
+Note: Time represented as Unix Epoch time.</li>
+</ol>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FizzyoRequestReturnType PostAnalytics()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Fizzyo.FizzyoRequestReturnType.html">FizzyoRequestReturnType</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
