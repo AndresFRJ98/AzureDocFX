@@ -82,6 +82,11 @@
 <h2 id="about-the-framework">About the framework</h2>
 <p>After importing the framework, you will have a folder called Fizzyo in your Assets directory. The folder contains everything you will need to make a Fizzyo game. The Fizzyo framework consists of singleton methods which you call when you need them.
 You will not need to modify anything.</p>
+<p>Everything you would want from the framework can be called with the pattern</p>
+<pre><code class="lang-csharp">FizzyoFramework.Instance.~~~~
+</code></pre><p>Followed by depending on what you want to use.</p>
+<p>The FizzyoFramework is designed so the Fizzyo games are played with a Fizzyo device, however if you do not have one, it can be simulated by using a joystick on a game controller.
+Tilting the stick simulates breath input, to the right is positive pressure, left is negative, tilting the stick more means more pressure.      </p>
 <h2 id="how-to-use">How to use</h2>
 <p>How to use these will be explained with an example space shooter game, which uses the Fizzyo device as a controller.
 The basic principle of this space shooter game is:</p>
@@ -89,9 +94,20 @@ The basic principle of this space shooter game is:</p>
 <li>The player controls the space ship to move left and right</li>
 <li>The player is able to shoot lasers to destroy enemies.</li>
 </ul>
-<p>And the Fizzyo device has two possible inputs, breath detection and a button. The example game will have the player breath input to shoot the lasers, and the button to control the player movement.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>To have your game playable as a Fizzyo game, it needs the Fizzyo Framework.
+You will need to have the FizzyoFramework script included in your scene. (take a look at the example level in the fizzyo scene folder as an example)  which is located in the Fizzyo &gt; scripts &gt; FizzyoFramework.</p>
+<p>You can either:</p>
+<ul>
+<li>Add the script FizzyoFramework to your scene, e.g. you could create an empty game object and attach the script</li>
+<li>Copy and use the example level scene in the scenes from Fizzyo as a base to what you build on.</li>
+</ul>
+<p>The Fizzyo device has two possible inputs, breath detection and a button. The example game will have the player breath input to shoot the lasers, and the button to control the player movement.</p>
 <h2 id="breath-detection">Breath detection</h2>
-<pre><code class="lang-csharp"> void OnBreathStarted(object sender)
+<pre><code class="lang-csharp">FizzyoFramework.Instance.Recogniser.BreathStarted += OnBreathStarted;
+FizzyoFramework.Instance.Recogniser.BreathComplete += OnBreathEnded;
+
+ void OnBreathStarted(object sender)
     {
 
     }
@@ -101,8 +117,8 @@ void OnBreathEnded(object sender, ExhalationCompleteEventArgs e)
 
     }
 </code></pre><p>This set of code allows the game to read breath inputs from the device. You must first initialise the first two lines, and the following code tells your game what to do at the start of a breath and the end of a breath. </p>
-<p>In the example game, the game is designed to shoot the laser upon a breath input. This is a part of the code for shooting lasers, a script attached on the play object.</p>
-<pre><code class="lang-chsarp">void OnBreathStarted(object sender)
+<p>In the example game, the game is designed to shoot the laser upon a breath input. This is a part of the code for shooting lasers, a script attached on the player object.</p>
+<pre><code class="lang-csharp">void OnBreathStarted(object sender)
     {
         gameObject.transform.GetChild (0).gameObject.SetActive (true);
     }
@@ -112,12 +128,22 @@ void OnBreathEnded(object sender, ExhalationCompleteEventArgs e)
         gameObject.transform.GetChild (0).gameObject.SetActive (false);
     }
 </code></pre><p>In this game, when there is a breath detected, the laser game object, which is a child object of the player object, is set active to true (laser appears), and at the end of a breath it is set to false (laser disappears).</p>
+<p>Also,&quot;e&quot; is an event fired at the end of the breath, giving information about the breath.
+Use this code inside the OnBreathEnded:</p>
+<p>e.BreathQuality - int, returns true if breath was 100% complete.
+e.Breathlength - float, returns the length of the exhaled breath in seconds.
+e.BreathCount - int, returns total number of exhaled breath in the session.
+e.IsBreathFull - bool, returns true is breath was 100% completed.
+e.ExhaledVolume - float, returns the total volume exhaled.</p>
 <h3 id="using-the-button">Using the button</h3>
-<p>The ButtonDown() is a boolean class, which returns true when the button is pressed and false when it is not. (You can also use Input.GetButtonDown(&quot;Fire1&quot;))</p>
+<p>The ButtonDown() is a boolean class, which returns true when the button is pressed and false when it is not. </p>
 <pre><code class="lang-csharp">public bool ButtonDown()
         {
             return Input.GetButtonDown(&quot;Fire1&quot;);
         }
+</code></pre><p>You can also use &quot;  Input.GetButtonDown(&quot;Fire1&quot;)  &quot; on its own without calling it through the framework.</p>
+<p>This ButtonDown() class returns true only when the button is pressed and not held down. If you want your code to continuously return true while the button is held down, you can use the code such as:</p>
+<pre><code class="lang-csharp">if (Input.GetButton(&quot;Fire1&quot;)) { doSomething();}
 </code></pre><p>An example from the space shooter game, where the player controls the spaceship using the button on the device.</p>
 <pre><code class="lang-csharp">void movePlayer(){
         if (FizzyoFramework.Instance.Device.ButtonDown() == true) {
@@ -152,20 +178,21 @@ void OnBreathEnded(object sender, ExhalationCompleteEventArgs e)
         }
     }
 </code></pre><p>This is a class from a script attached to the player game object, which is called when the button on the device is pressed. The player moves in one direction, left or right until the player reaches the end of the screen, then moves in the other direction.</p>
-<h3 id="achievements">Achievements</h3>
-<p>Achievements need to be registered in the <a href="https://fizzyo-ucl.co.uk/">Fizzyo Portal</a> first, and using this code in your game unlocks the achievement.</p>
+<h2 id="achievements">Achievements</h2>
+<p>Achievements need to be registered in the [Fizzyo Portal][<a href="https://fizzyo-ucl.co.uk/">https://fizzyo-ucl.co.uk/</a>] first, and using this code in your game unlocks the achievement.</p>
 <pre><code class="lang-csharp">private string achievementID = &quot;&quot;;
 
 FizzyoFramework.Instance.Achievments.UnlockAchievement (achievementID:);
-</code></pre><h3 id="high-score">High Score</h3>
+</code></pre><h2 id="high-score">High score</h2>
 <p>High scores achieved in the game can be posted as well.
 Use this code with the score to be posted.</p>
-<pre><code class="lang-chsarp">FizzyoFramework.Instance.Achievments.PostScore((int)score);
-</code></pre><h3 id="log-in">Log In:</h3>
+<pre><code class="lang-csharp">FizzyoFramework.Instance.Achievments.PostScore((int)score);
+</code></pre><h2 id="log-in">Log in</h2>
 <p>Users need to be logged in when they play the game, since game analytics need to be submitted. It will always appear unless you disable it.
 If you want the login to appear at a specific point in your game, you can call;</p>
-<pre><code class="lang-chsarp">FizzyoFramework.Instance.User.Login();
-</code></pre></article>
+<pre><code class="lang-csharp">FizzyoFramework.Instance.User.Login();
+</code></pre><p>If you want to disable this in certain scenes, go to the FizzyoFramework script, and untick the show login box in the inspector.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
