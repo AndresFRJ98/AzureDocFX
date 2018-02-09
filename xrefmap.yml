@@ -373,6 +373,18 @@ references:
   commentId: F:Fizzyo.FizzyoAnalytics.goodBreathCount
   fullName: Fizzyo.FizzyoAnalytics.goodBreathCount
   nameWithType: FizzyoAnalytics.goodBreathCount
+- uid: Fizzyo.FizzyoAnalytics.OnApplicationQuit
+  name: OnApplicationQuit()
+  href: api/Fizzyo.FizzyoAnalytics.html#Fizzyo_FizzyoAnalytics_OnApplicationQuit
+  commentId: M:Fizzyo.FizzyoAnalytics.OnApplicationQuit
+  fullName: Fizzyo.FizzyoAnalytics.OnApplicationQuit()
+  nameWithType: FizzyoAnalytics.OnApplicationQuit()
+- uid: Fizzyo.FizzyoAnalytics.OnApplicationQuit*
+  name: OnApplicationQuit
+  href: api/Fizzyo.FizzyoAnalytics.html#Fizzyo_FizzyoAnalytics_OnApplicationQuit_
+  commentId: Overload:Fizzyo.FizzyoAnalytics.OnApplicationQuit
+  fullName: Fizzyo.FizzyoAnalytics.OnApplicationQuit
+  nameWithType: FizzyoAnalytics.OnApplicationQuit
 - uid: Fizzyo.FizzyoAnalytics.PostAnalytics
   name: PostAnalytics()
   href: api/Fizzyo.FizzyoAnalytics.html#Fizzyo_FizzyoAnalytics_PostAnalytics
